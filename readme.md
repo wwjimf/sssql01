@@ -18,11 +18,13 @@
         ```
 
     D:\Drive: New Disk, create volume D:\
-        ```PowerShell
+        ~~~~
+
         get-disk | where partitionstyle -eq 'raw' | initialize-disk -partitionstyle GPT
         $d = get-disk -number 1
         New-Volume -Disk 1 -Filesystem NTFS -DriveLetter D -FriendlyName "Data"
-        ```
+        
+        ~~~~
 
 ## SQL Server
 
